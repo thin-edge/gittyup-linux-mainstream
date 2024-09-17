@@ -1,0 +1,64 @@
+{
+    "status": "init",
+    "name": "prod-profile",
+    "version": "v2",
+    "operations": [
+        {
+            "operation": "software_update",
+            "skip": false,
+            "payload": {
+                "updateList": [
+                    {
+                        "type": "apt",
+                        "modules": [
+                            {
+                                "name": "c8y-command-plugin",
+                                "version": "0.0.2",
+                                "action": "install"
+                            },
+                            {
+                                "name": "tedge-container-plugin",
+                                "version": "1.0.2",
+                                "action": "install"
+                            },
+                            {
+                                "name": "tedge-monit-setup",
+                                "version": "0.3.0",
+                                "action": "install"
+                            },
+                            {
+                                "name": "jq",
+                                "version": "latest",
+                                "action": "install"
+                            },
+                            {
+                                "name": "cowsay",
+                                "version": "3.03+dfsg2-8",
+                                "action": "install"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "operation": "software_update",
+            "skip": false,
+            "payload": {
+                "updateList": [
+                    {
+                        "type": "container-group",
+                        "modules": [
+                            {
+                                "name": "opcua-device-gateway-1018",
+                                "version": "20240701.1034",
+                                "url": "http://localhost:8001/c8y/inventory/binaries/37221941",
+                                "action": "install"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
