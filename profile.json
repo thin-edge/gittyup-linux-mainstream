@@ -1,7 +1,7 @@
 {
     "status": "init",
     "name": "prod-profile",
-    "version": "v3",
+    "version": "v4",
     "operations": [
         {
             "operation": "software_update",
