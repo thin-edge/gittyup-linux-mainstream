@@ -1,7 +1,7 @@
 {
     "status": "init",
     "name": "prod-profile",
-    "version": "v2",
+    "version": "v4",
     "operations": [
         {
             "operation": "software_update",
@@ -24,11 +24,6 @@
                             {
                                 "name": "jq",
                                 "version": "latest",
-                                "action": "install"
-                            },
-                            {
-                                "name": "cowsay",
-                                "version": "3.03+dfsg2-8",
                                 "action": "install"
                             }
                         ]
