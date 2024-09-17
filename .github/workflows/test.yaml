@@ -1,0 +1,16 @@
+name: Test
+on:
+  workflow_dispatch:
+  pull_request: 
+    branches: [ main, tedge_rugpi_rpi-tryboot-containers, thin-edge.io ]
+  merge_group:
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - run: |
+          echo Running awesome test suite
